@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mail($destinatario, $asunto, $contenido);
 
     // Redirigir al usuario después de enviar el formulario
-    header("Location: gracias.html");
+    header("Location: thanks.html");
 } else {
     // Si alguien intenta acceder directamente al script PHP
     header("Location: index.html");
