@@ -1,0 +1,124 @@
+body {
+    font-family: monospace;
+    /* background-color: #252525; */
+    background-image: url("../main/background.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.title-terminal {
+    color: #31C82B;
+}
+
+.files {
+    color: #FF0101;
+}
+
+
+.terminal {
+    background-color: #2D2D2D;
+    width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 
+        20px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-header {
+    background-color: #2f343f;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse; /* Cambia la dirección de los elementos en la fila */
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.minimize {
+    background-color: #fac536;
+}
+
+.maximize {
+    background-color: #39ea49;
+}
+
+.close {
+    background-color: #f25056;
+}
+
+.title-bar {
+    color: #D3D7CF;
+    font-size: 14px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu-bar {
+    color: #D3D7CF;
+    font-size: 14px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.terminal-window {
+    background-color: #2D2D2D;
+    padding: 20px;
+    color: #FFF;
+    font-size: 14px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.host {
+    color: #31C82B;
+}
+
+.output {
+    color: #FFF;
+}
+
+.error {
+    color: #CC0000;
+}
+
+.comment {
+    color: #7F9F7F;
+}
+
+a:link, a:visited, a:active {
+    color: #5ab9e7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #addbe4;
+    text-decoration: none;
+}
+
+.menu-bar span {
+    cursor: pointer;
+    color: #fff; /* Mantén el texto blanco */
+    font-weight: bold;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-bar span:hover {
+    background-color: #3B3B3B; /* Fondo oscuro en hover */
+    color: #FFFFFF; /* Color del texto al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados para simular un botón */
+}
