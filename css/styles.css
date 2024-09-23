@@ -1,7 +1,7 @@
 body {
     font-family: monospace;
     /* background-color: #252525; */
-    background-image: url("../main/background.jpeg");
+    background-image: url("../main/bkg.jpeg");
     display: flex;
     justify-content: center;
     align-items: center;
