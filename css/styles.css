@@ -1,8 +1,45 @@
+        /* Estilo del submenú */
+        .submenu {
+            display: none; /* Oculto por defecto */
+            background-color: #333; /* Mismo color que el menú principal */
+            position: absolute; /* Para que se superponga sobre el menú */
+            z-index: 1; /* Asegúrate de que esté por encima del contenido */
+        }
+        
+        .submenu span {
+            display: block; /* Mostrar cada elemento del submenú como bloque */
+            color: white; /* Color del texto */
+            padding: 10px; /* Espaciado interno */
+            cursor: pointer; /* Cambiar cursor al pasar por encima */
+        }
+
+        .submenu span:hover {
+            background-color: #444; /* Color al pasar el mouse */
+        }
+        /* Estilo del submenú */
+        .submenu {
+            display: none; /* Oculto por defecto */
+            background-color: #333; /* Mismo color que el menú principal */
+            position: absolute; /* Para que se superponga sobre el menú */
+            z-index: 1; /* Asegúrate de que esté por encima del contenido */
+        }
+        
+        .submenu span {
+            display: block; /* Mostrar cada elemento del submenú como bloque */
+            color: white; /* Color del texto */
+            padding: 10px; /* Espaciado interno */
+            cursor: pointer; /* Cambiar cursor al pasar por encima */
+        }
+
+        .submenu span:hover {
+            background-color: #444; /* Color al pasar el mouse */
+        }
 body {
     font-family: monospace;
-    /* background-color: #252525; */
-    background-image: url("../main/bkg.jpeg");
-    display: flex;
+    background: linear-gradient(135deg, #412326, #412346, #412326);
+    /* background-image: url("../main/bkg.jpeg"); */
+    /* background-color: #04321F; */
+     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -17,6 +54,11 @@ body {
     color: #e86c22;
 }
 
+.files:hover {
+    color: #D8935E; /* Cambia el color del texto al pasar el mouse */
+    text-decoration: none; /* Subraya el texto */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transición suave */
+}
 
 .terminal {
     background-color: #2D2D2D;
@@ -71,7 +113,7 @@ body {
     color: #D3D7CF;
     font-size: 14px;
     flex-grow: 1;
-    text-align: left;
+text-align: left;
 }
 
 .terminal-window {
@@ -88,7 +130,7 @@ body {
 }
 
 .output {
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 .error {
@@ -121,4 +163,23 @@ a:hover {
     background-color: #3B3B3B; /* Fondo oscuro en hover */
     color: #FFFFFF; /* Color del texto al pasar el mouse */
     border-radius: 5px; /* Bordes redondeados para simular un botón */
+}
+
+/* Estilo del submenú */
+.submenu {
+    display: none; /* Oculto por defecto */
+    background-color: #333; /* Mismo color que el menú principal */
+    position: absolute; /* Para que se superponga sobre el menú */
+    z-index: 1; /* Asegúrate de que esté por encima del contenido */
+}
+
+.submenu span {
+    display: block; /* Mostrar cada elemento del submenú como bloque */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+.submenu span:hover {
+    background-color: #444; /* Color al pasar el mouse */
 }
