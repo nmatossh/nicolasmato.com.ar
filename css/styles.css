@@ -36,8 +36,8 @@
         }
 body {
     font-family: monospace;
-    background: linear-gradient(135deg, #412326, #412346, #412326);
-    /* background-image: url("../main/bkg.jpeg"); */
+    /* background: linear-gradient(135deg, #412326, #412346, #412326); */
+    background-image: url("../main/bkg.jpeg");
     /* background-color: #04321F; */
      display: flex;
     justify-content: center;
