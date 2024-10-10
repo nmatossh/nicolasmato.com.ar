@@ -120,10 +120,13 @@ text-align: left;
 .terminal-window {
     background-color: #2D2D2D;
     padding: 20px;
+    padding-top:10px;
     color: #FFF;
     font-size: 12px;
-    height: 400px;
+    /* width: 420px; */
+    height: 380px;
     overflow-y: auto;
+    
 }
 
 .host {
