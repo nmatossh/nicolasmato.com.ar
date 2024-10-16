@@ -52,7 +52,7 @@ body {
 }
 
 .files {
-    color: #e86c22;
+    color: #ce7b4b;
 }
 
 .files:hover {
@@ -146,7 +146,7 @@ text-align: left;
 }
 
 a:link, a:visited, a:active {
-    color: #5ab9e7;
+    color: #c1a970;
     text-decoration: none;
 }
 
