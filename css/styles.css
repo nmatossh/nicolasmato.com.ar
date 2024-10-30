@@ -1,45 +1,6 @@
-        /* Estilo del submenú */
-        .submenu {
-            display: none; /* Oculto por defecto */
-            background-color: #333; /* Mismo color que el menú principal */
-            position: absolute; /* Para que se superponga sobre el menú */
-            z-index: 1; /* Asegúrate de que esté por encima del contenido */
-        }
-        
-        .submenu span {
-            display: block; /* Mostrar cada elemento del submenú como bloque */
-            color: white; /* Color del texto */
-            padding: 10px; /* Espaciado interno */
-            cursor: pointer; /* Cambiar cursor al pasar por encima */
-        }
-
-        .submenu span:hover {
-            background-color: #444; /* Color al pasar el mouse */
-        }
-        /* Estilo del submenú */
-        .submenu {
-            display: none; /* Oculto por defecto */
-            background-color: #333; /* Mismo color que el menú principal */
-            position: absolute; /* Para que se superponga sobre el menú */
-            z-index: 1; /* Asegúrate de que esté por encima del contenido */
-        }
-        
-        .submenu span {
-            display: block; /* Mostrar cada elemento del submenú como bloque */
-            color: white; /* Color del texto */
-            padding: 10px; /* Espaciado interno */
-            cursor: pointer; /* Cambiar cursor al pasar por encima */
-        }
-
-        .submenu span:hover {
-            background-color: #444; /* Color al pasar el mouse */
-        }
 body {
     font-family: monospace;
-    /* background: linear-gradient(135deg, #412326, #412346, #412326); */
-    /* background-image: url("../main/bkg.jpeg"); */
-	/* background-color: rgba(45, 45, 45, 0.5); 10% transparente  */
-	background-color: #262c36;
+    background-color: #262c36;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,26 +9,15 @@ body {
 }
 
 .title-terminal {
-    color: #31C82B;
-}
-
-.files {
-    color: #ce7b4b;
-}
-
-.files:hover {
-    color: #D8935E; /* Cambia el color del texto al pasar el mouse */
-    text-decoration: none; /* Subraya el texto */
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transición suave */
+    color: #ffffff;
 }
 
 .terminal {
-    background-color: #2D2D2D;
+    background-color: #131212;
     width: 700px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 
-        20px 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .terminal-header {
@@ -76,7 +26,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse; /* Cambia la dirección de los elementos en la fila */
+    flex-direction: row-reverse;
 }
 
 .buttons {
@@ -114,23 +64,35 @@ body {
     color: #D3D7CF;
     font-size: 14px;
     flex-grow: 1;
-text-align: left;
+    text-align: left;
+}
+
+.menu-bar span {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-bar span:hover {
+    background-color: #373F51;
+    color: #FFFFFF;
+    border-radius: 5px;
 }
 
 .terminal-window {
-    background-color: #2D2D2D;
+    background-color: #222222;
     padding: 20px;
-    padding-top:10px;
+    padding-top: 10px;
     color: #FFF;
     font-size: 12px;
-    /* width: 420px; */
     height: 380px;
     overflow-y: auto;
-    
 }
 
 .host {
-    color: #31C82B;
+    color: #317dd3;
 }
 
 .output {
@@ -142,48 +104,53 @@ text-align: left;
 }
 
 .comment {
-    color: #7F9F7F;
+    color: #1c5072;
 }
 
 a:link, a:visited, a:active {
-    color: #c1a970;
+    color: #81ace4;
     text-decoration: none;
 }
 
 a:hover {
-    color: #d0e4ad;
+    color: #4582f3;
     text-decoration: none;
-}
-
-.menu-bar span {
-    cursor: pointer;
-    color: #fff; /* Mantén el texto blanco */
-    font-weight: bold;
-    padding: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.menu-bar span:hover {
-    background-color: #3B3B3B; /* Fondo oscuro en hover */
-    color: #FFFFFF; /* Color del texto al pasar el mouse */
-    border-radius: 5px; /* Bordes redondeados para simular un botón */
 }
 
 /* Estilo del submenú */
 .submenu {
-    display: none; /* Oculto por defecto */
-    background-color: #333; /* Mismo color que el menú principal */
-    position: absolute; /* Para que se superponga sobre el menú */
-    z-index: 1; /* Asegúrate de que esté por encima del contenido */
+    display: none;
+    background-color: #2f343f;
+    position: absolute;
+    z-index: 1;
 }
 
 .submenu span {
-    display: block; /* Mostrar cada elemento del submenú como bloque */
-    color: white; /* Color del texto */
-    padding: 10px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    display: block;
+    color: white;
+    padding: 6px;
+    cursor: pointer;
 }
 
-.submenu span:hover {
-    background-color: #444; /* Color al pasar el mouse */
+/* Estilo del overlay */
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0; /* Alineado al borde superior */
+    left: 0; /* Alineado al borde izquierdo */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    justify-content: center; /* Alineada a la izquierda */
+    align-items: center; /* Centra verticalmente */
+    z-index: 10; /* Asegúrate de que esté por encima del contenido */
+}
+
+/* Estilo de la imagen en el overlay */
+.overlay-image {
+    max-width: 40%; /* Máximo ancho de la imagen */
+    max-height: 40%; /* Máxima altura de la imagen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Agrega sombra para resaltar la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    transform: translate(194px, 38px); /* Desplaza la imagen 40px a la derecha y 40px hacia abajo */
 }
