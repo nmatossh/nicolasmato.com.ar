@@ -5,12 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlayImage = document.getElementById('overlayImage');
     const closeOverlay = document.getElementById('closeOverlay'); // botón cerrar
 
-    // submenú al hacer clic en "File"
+    // submenú "File"
     viewMenu.addEventListener('click', () => { // Cambiado 'fileMenu' a 'viewMenu'
         photoMenu.style.display = photoMenu.style.display === 'block' ? 'none' : 'block';
     });
 
-    // Mostrar la imagen en el overlay al hacer clic en una opción del submenú
     photoMenu.querySelectorAll('span').forEach(item => {
         item.addEventListener('click', (event) => {
             const imgSrc = event.target.dataset.img;
@@ -20,19 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Cierra el overlay al hacer clic en cualquier parte del overlay
     overlay.addEventListener('click', () => {
-        overlay.style.display = 'none'; // Oculta el overlay
-        closeOverlay.style.display = 'block'; // Muestra nuevamente el botón de cerrar
+        overlay.style.display = 'none';
+        closeOverlay.style.display = 'block';
     });
 
-    // Evita que el clic en la imagen cierre el overlay
     overlayImage.addEventListener('click', (event) => {
-        event.stopPropagation(); // Evita que el clic en la imagen cierre el overlay
+        event.stopPropagation();
     });
 });
 
-const cursor = document.getElementById('cursor'); // script cursor parpadeante
+const cursor = document.getElementById('cursor');
 let isVisible = false;
 
 setInterval(() => {

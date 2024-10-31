@@ -132,7 +132,7 @@ a:hover {
     cursor: pointer;
 }
 
-/* Estilo del overlay */
+/* Ooverlay style */
 .overlay {
     display: none; /* Oculto por defecto */
     position: fixed; /* Fijo para cubrir toda la pantalla */
@@ -143,14 +143,14 @@ a:hover {
     background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
     justify-content: center; /* Alineada a la izquierda */
     align-items: center; /* Centra verticalmente */
-    z-index: 10; /* Asegúrate de que esté por encima del contenido */
+    z-index: 10;
 }
 
 /* Estilo de la imagen en el overlay */
 .overlay-image {
     max-width: 40%; /* Máximo ancho de la imagen */
     max-height: 40%; /* Máxima altura de la imagen */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Agrega sombra para resaltar la imagen */
-    border-radius: 10px; /* Bordes redondeados para la imagen */
-    transform: translate(194px, 38px); /* Desplaza la imagen 40px a la derecha y 40px hacia abajo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar imagen */
+    border-radius: 10px; /* Bordes para la imagen */
+    transform: translate(194px, 38px); /* Imagen 40px derecha y 40px abajo */
 }
