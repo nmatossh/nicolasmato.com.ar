@@ -41,16 +41,18 @@ body {
     display: inline-block;
 }
 
+/* 3 Buttons */
+
 .minimize {
-    background-color: #6b9ee0;
+    background-color: #92be79;
 }
 
 .maximize {
-    background-color: #1e88eb;
+    background-color: #92be79;
 }
 
 .close {
-    background-color: #2f42f1;
+    background-color: #92be79;
 }
 
 .title-bar {
@@ -92,7 +94,7 @@ body {
 }
 
 .host {
-    color: #317dd3;
+    color: #92be79;
 }
 
 .output {
@@ -108,7 +110,7 @@ body {
 }
 
 a:link, a:visited, a:active {
-    color: #81ace4;
+    color: #c4dd6b;
     text-decoration: none;
 }
 
