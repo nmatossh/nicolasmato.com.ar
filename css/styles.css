@@ -156,3 +156,29 @@ a:hover {
     border-radius: 10px; /* Bordes para la imagen */
     transform: translate(194px, 38px); /* Imagen 40px derecha y 40px abajo */
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; /* Espaciado entre filas */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    min-width: 130px; /* Ajusta este valor según sea necesario */
+    font-weight: bold;
+}
+
+.url {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.url:hover {
+    text-decoration: underline;
+}
