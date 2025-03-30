@@ -100,11 +100,10 @@ body {
 .output {
     color: #FFF;
 }
-
-.error {
+/* .error {
     color: #CC0000;
 }
-
+*/
 .comment {
     color: #1c5072;
 }
