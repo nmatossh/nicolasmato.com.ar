@@ -26,7 +26,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    margin: 0;
 }
 
 .title-terminal {
@@ -142,7 +141,7 @@ a:hover {
 /* Estilo del submenú */
 .submenu {
     display: none;
-    background-color: #2f343f;
+    background-color: #373f51;
     position: absolute;
     z-index: 1;
     border: none; /* Elimina cualquier borde por defecto */
@@ -160,7 +159,7 @@ a:hover {
 .submenu span:hover {
     border-radius: 0;
     border: none !important; /* Elimina el borde gris al hacer hover */
-    background-color: #373F51;
+    background-color: #373f51;
     color: #fff;
 }
 
