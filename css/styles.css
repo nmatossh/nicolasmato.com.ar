@@ -7,8 +7,9 @@
     position: absolute;
     left: 0;
     top: 100%;
-    background: #222;
-    border: 1px solid #444;
+    background: #2f343f;
+    /* border: 1px solid #444; */
+    border: none
     z-index: 10;
 }
 
@@ -99,7 +100,7 @@ body {
 .menu-bar span:hover {
     background-color: #373F51;
     color: #FFFFFF;
-    border-radius: 5px;
+    border-radius: 0; /* Bordes rectos */
 }
 
 .terminal-window {
@@ -143,6 +144,7 @@ a:hover {
     background-color: #2f343f;
     position: absolute;
     z-index: 1;
+    border: none; /* Elimina cualquier borde por defecto */
 }
 
 .submenu span {
@@ -150,6 +152,15 @@ a:hover {
     color: white;
     padding: 6px;
     cursor: pointer;
+    border: none; /* Asegura que no haya borde */
+    border-radius: 0; /* Bordes rectos */
+}
+
+.submenu span:hover {
+    border-radius: 0;
+    border: none !important; /* Elimina el borde gris al hacer hover */
+    background-color: #373F51;
+    color: #fff;
 }
 
 /* Ooverlay style */
