@@ -9,7 +9,7 @@
     top: 100%;
     background: #2f343f;
     /* border: 1px solid #444; */
-    border: none
+    border: none;
     z-index: 10;
 }
 
@@ -55,24 +55,65 @@ body {
 }
 
 .buttons span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2f343f;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: filter 0.2s ease;
 }
 
-/* 3 Buttons */
+.buttons span:hover {
+    filter: brightness(0.85);
+}
 
 .minimize {
     background-color: #92be79;
+    position: relative;
+}
+.minimize::after {
+    content: "_";
+    position: absolute;
+    text
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(4px);
 }
 
 .maximize {
     background-color: #92be79;
+    position: relative;
+}
+.maximize::after {
+    content: "□";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-1px);
 }
 
 .close {
     background-color: #92be79;
+    position: relative;
+}
+.close::after {
+    content: "×";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(1px);
+}
+
+.minimize::after,
+.maximize::after, 
+.close::after {
+    font-weight: bold;
 }
 
 .title-bar {
@@ -100,7 +141,7 @@ body {
 .menu-bar span:hover {
     background-color: #373F51;
     color: #FFFFFF;
-    border-radius: 0; /* Bordes rectos */
+    border-radius: 0;
 }
 
 .terminal-window {
@@ -120,10 +161,7 @@ body {
 .output {
     color: #FFF;
 }
-/* .error {
-    color: #CC0000;
-}
-*/
+
 .comment {
     color: #1c5072;
 }
@@ -138,13 +176,12 @@ a:hover {
     text-decoration: none;
 }
 
-/* Estilo del submenú */
 .submenu {
     display: none;
     background-color: #373f51;
     position: absolute;
     z-index: 1;
-    border: none; /* Elimina cualquier borde por defecto */
+    border: none;
 }
 
 .submenu span {
@@ -152,44 +189,42 @@ a:hover {
     color: white;
     padding: 6px;
     cursor: pointer;
-    border: none; /* Asegura que no haya borde */
-    border-radius: 0; /* Bordes rectos */
+    border: none;
+    border-radius: 0;
 }
 
 .submenu span:hover {
     border-radius: 0;
-    border: none !important; /* Elimina el borde gris al hacer hover */
+    border: none !important;
     background-color: #373f51;
     color: #fff;
 }
 
-/* Ooverlay style */
 .overlay {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo para cubrir toda la pantalla */
-    top: 0; /* Alineado al borde superior */
-    left: 0; /* Alineado al borde izquierdo */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Alto completo */
-    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
-    justify-content: center; /* Alineada a la izquierda */
-    align-items: center; /* Centra verticalmente */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: center;
+    align-items: center;
     z-index: 10;
 }
 
-/* Estilo de la imagen en el overlay */
 .overlay-image {
-    max-width: 40%; /* Máximo ancho de la imagen */
-    max-height: 40%; /* Máxima altura de la imagen */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar imagen */
-    border-radius: 10px; /* Bordes para la imagen */
-    transform: translate(194px, 38px); /* Imagen 40px derecha y 40px abajo */
+    max-width: 40%;
+    max-height: 40%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transform: translate(194px, 38px);
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    gap: 1px; /* Espaciado entre filas */
+    gap: 1px;
 }
 
 .row {
@@ -198,7 +233,7 @@ a:hover {
 }
 
 .label {
-    min-width: 130px; /* Ajusta este valor según sea necesario */
+    min-width: 130px;
     font-weight: bold;
 }
 
@@ -209,4 +244,5 @@ a:hover {
 }
 
 .url:hover {
-    text-
+    text-decoration: underline;
+}
