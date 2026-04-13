@@ -3,297 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[nmato@website] v2.1</title>
-    <link rel="icon" href="img/alien.png" type="image/png">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; img-src 'self' data: https:; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="description" content="Nicolas Mato - IT Infrastructure Consulting | SR Unix/Linux Engineer">
+    <title>Nicolas Mato - IT Infrastructure Consulting | SR Unix/Linux Engineer</title>
+    <link rel="icon" href="../img/alien.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" integrity="sha384-t1nt8BQoYMLFN5p42tRAtuAAFQaCQODekUVeKKZrEnEyp4H2R0RHFz0KWpmj7i8g">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- terminal title -->
-    <div class="terminal">
-        <div class="terminal-header">
-            <div class="buttons">
-                <span class="minimize"><a></a></span>
-                <span class="maximize"><a></a></span>
-                <span class="close"><a></a></span>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">nmato<span class="logo-cursor">_</span></a>
+            <ul class="nav-links" id="main-menu">
+                <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+                <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+                <li><button type="button" id="lang-switch" class="lang-btn" aria-label="Switch language">ENG</button></li>
+            </ul>
+            <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-mi" class="hero">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <div class="hero-avatar">
+                    <img src="../img/alien.jpg" alt="Nicolas Mato" width="180" height="180">
+                </div>
+                <h1 class="hero-title">Nicolás Mato</h1>
+                <p class="hero-tagline" data-i18n="hero.tagline">Consultoría de Infraestructura IT | Ingeniero SR Unix/Linux</p>
+                <p class="hero-desc"><span data-i18n="hero.desc.line2"></span><br><span data-i18n="hero.desc.line3.prefix"></span><span id="years-exp"></span><span data-i18n="hero.desc.line3.suffix"></span></p>
+                <div class="hero-cta">
+                    <a href="https://calendly.com/nmato/new-meeting" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="hero.cta.meeting">Agendar reunión</a>
+                    <a href="../nmato_cv.pdf" class="btn btn-secondary" download data-i18n="hero.cta.cv">Descargar CV</a>
+                </div>
             </div>
-            <div class="title-bar"><span>nmato@website: ~</span></div>
-        </div>
+        </section>
 
-        <!-- terminal menu-->
-        <div class="terminal-header">
-            <div class="menu-bar">
-                <span id="file">
-                    File
-                    <div id="photo-menu" class="submenu">
-                        <span class="photo-option" data-img="img/alien.jpg">Photo</span>
+        <section id="services" class="section services">
+            <div class="container">
+                <h2 class="section-title" data-i18n="services.title">Servicios</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-server"></i> <span data-i18n="services.infrastructure.title">Infraestructura</span></h3>
+                        </div>
+                        <p class="card-desc" data-i18n="services.infrastructure.desc">Servidores & soluciones cloud</p>
+                        <div class="card-body">
+                            <p data-i18n="services.infrastructure.detail">Diseño y despliegue de entornos de alta disponibilidad (físicos, virtuales y cloud). Especialista en conectividad segura (VPN), migraciones críticas a Servicios Cloud y optimización de arquitecturas híbridas.</p>
+                        </div>
                     </div>
-                </span>
-                <span>New</span>
-                <span>View</span>
-                <span>Search</span>
-                <span>Terminal</span>
-                <span>Help</span>
-            </div>
-        </div>
-
-        <div class="terminal-window">
-            <p><span class="host">GNU/Linux Kernel v6.11-rc7-209-g1e39c60d14b86</span></p>
-
-                <div class="container">
-                    <div class="row">
-                        <span class="label">* Documentation:</span>
-                        <a class="url" href="https://linktr.ee/nmato" target="_blank">Linktree</a>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-shield-halved"></i> <span data-i18n="services.security.title">Ciberseguridad</span></h3>
+                        </div>
+                        <p class="card-desc" data-i18n="services.security.desc">Auditoría & Recuperación</p>
+                        <div class="card-body">
+                            <p data-i18n="services.security.detail">Auditorías de vulnerabilidades bajo estándares de cumplimiento. Implementación de políticas robustas de Backup y Disaster Recovery para garantizar la continuidad del negocio.</p>
+                        </div>
                     </div>
-                    <div class="row">
-                        <span class="label">* Meet Schedule:</span>
-                        <a class="url" href="https://calendly.com/nmato/30min" target="_blank">Calendly</a>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-code"></i> <span data-i18n="services.development.title">Desarrollo</span></h3>
+                        </div>
+                        <p class="card-desc" data-i18n="services.development.desc">Automatización y DevOps</p>
+                        <div class="card-body">
+                            <p data-i18n="services.development.detail">Optimización de procesos mediante scripts avanzados (Python/Bash) e integración de pipelines CI/CD. Desarrollo de microservicios, APIs y dashboards personalizados para la gestión de infraestructura.</p>
+                        </div>
                     </div>
-                    <div class="row">
-                        <span class="label">* IT Consulting:</span>
-                        <a class="url" href="https://hexacore.com.ar" target="_blank">Hexacore</a>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-screwdriver-wrench"></i> <span data-i18n="services.hardware.title">Hardware & Software</span></h3>
+                        </div>
+                        <p class="card-desc" data-i18n="services.hardware.desc">Gestión de equipamiento</p>
+                        <div class="card-body">
+                            <p data-i18n="services.hardware.detail">Diagnóstico avanzado, reparación y optimización de estaciones de trabajo y servidores. Gestión de actualizaciones de software, mantenimiento preventivo y upgrades de rendimiento para extender la vida útil de los activos.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-desktop"></i> <span data-i18n="services.os.title">Sistemas Operativos</span></h3>
+                        </div>
+                        <p class="card-desc" data-i18n="services.os.desc">Gestión de plataformas</p>
+                        <div class="card-body">
+                            <p data-i18n="services.os.detail">Despliegue, hardening y administración de entornos Windows y Linux. Gestión de usuarios, servicios y seguridad nativa para garantizar la estabilidad de sistemas críticos.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-link"></i> <span data-i18n="services.documentation.title">Documentación</span></h3>
+                        </div>
+                        <p class="card-desc" data-i18n="services.documentation.desc">Gestión de procedimientos</p>
+                        <div class="card-body">
+                            <p data-i18n="services.documentation.detail">Estructuración de bases de conocimiento, guías operativas e instructivos técnicos alineados a normas ISO 9001 e ISO 27001. Recursos centralizados para maximizar la eficiencia operativa.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-            <p id="sysInfo"></p>
-            
-            <p><span class="host">nmato@website:~$</span> ls -l</p>
-            <p>total 5<br></p>
-            <p>
-                drwxr-xr-x 2 nmato nmato 1980 feb 12 2010 <a href="https://linkedin.com/in/nmato" target="_blank">linkedin</a><br>
-                -rw-r--r-- 2 nmato nmato 1980 sep 01 2024 <a href="nmato_cv.pdf" target="_blank">nmato_resume.pdf</a><br>
-                drwxr-xr-x 2 nmato nmato 1980 may 04 2011 <a href="https://github.com/nmatossh" target="_blank">github</a><br>
-                drwxr-xr-x 2 nmato nmato 1980 abr 07 2018 <a href="https://gitlab.com/nmato.sh" target="_blank">gitlab</a><br>
-                drwxr-xr-x 2 nmato nmato 1980 oct 01 2024 <a href="https://hexacore.com.ar" target="_blank">hexacore</a><br>
-                <!-- drwxr-xr-x 2 nmato nmato 1980 ago 01 2024 <a href="https://github.com/HexacoreIT" target="_blank">hexacore_github</a><br> -->
-                <!-- drwxr-xr-x 2 nmato nmato 1980 oct 01 2024 <a href="https://hexacore.com.ar/consultoria.html" target="_blank">consultoria_it</a><br>-->
-            </p>
-            <p><span class="host">nmato@website:~$</span><span id="cursor"> █</span></p>
+        <section id="contacto" class="section contact">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+                <p class="contact-text" data-i18n="contact.text">¿Proyecto, consultoría o colaboración?</p>
+                <div class="contact-info">
+                    <p class="contact-item"><i class="fa-solid fa-envelope"></i> <a id="contact-email" class="contact-email-link" href="#" rel="nofollow" data-i18n="contact.emailLink">Enviame un correo</a></p>
+                    <p class="contact-item"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <a href="https://api.whatsapp.com/send?phone=5491123923138" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsappLink">Contactame por Whatsapp</a></p>
+                    <p class="contact-item"><i class="fa-solid fa-location-dot"></i> Buenos Aires, Argentina</p>
+                    <p class="contact-item"><i class="fa-solid fa-clock"></i> Lun a Vie 9:00 - 18:00 hs</p>
+                    <p class="contact-item"><i class="fa-solid fa-comments"></i> Respuesta en menos de 24 hs hábiles</p>
+                    <p class="contact-note"><span data-i18n="contact.note1">Consultas sin compromiso.</span><span data-i18n="contact.note2">Presupuestos a medida según el alcance del proyecto.</span></p>
+                </div>
+                <div class="contact-actions">
+                    <a href="https://calendly.com/nmato/new-meeting" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="contact.meeting">Agendar Reunión</a>
+                    <a href="https://hexacore.com.ar" class="btn btn-outline" target="_blank" rel="noopener">Hexacore</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="footer-text">© 2026 Nicolás Mato | Design by <a href="https://hexacore.com.ar" target="_blank" rel="noopener">Hexacore</a></p>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/nmato" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5491123923138" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://calendly.com/nmato/new-meeting" target="_blank" rel="noopener" aria-label="Calendly"><i class="fa-solid fa-calendar-days"></i></a>
+                <a href="https://github.com/nmatossh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
-    </div>
-
-    <!-- Contenedor del overlay -->
-    <div id="imageOverlay" class="overlay">
-        <span class="close" id="closeOverlay">&times;</span>
-        <img id="overlayImage" class="overlay-image" alt="">
-    </div>
+    </footer>
 
     <script src="js/scripts.js"></script>
 </body>
-
-<!--
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-If you can read this, you've scrolled too much.
-
--->
+</html>
