@@ -7,6 +7,8 @@
             'nav.skills': 'Aptitudes',
             'nav.services': 'Servicios',
             'nav.contact': 'Contacto',
+            'nav.menu.open': 'Abrir menú',
+            'nav.menu.close': 'Cerrar menú',
             'hero.tagline': 'Consultoría de Infraestructura IT | Ingeniero SR Unix/Linux',
             'hero.desc.line2': 'Soluciones a medida para el hogar, Empresas y PyMEs.',
             'hero.desc.line3.prefix': 'Más de ',
@@ -14,20 +16,6 @@
             'hero.cta.meeting': 'Agendar reunión',
             'hero.cta.cv': 'Descargar CV',
             'skills.title': 'Aptitudes',
-            'skills.item1': 'Resolución de problemas complejos',
-            'skills.item2': 'Comunicación técnica clara',
-            'skills.item3': 'Pensamiento analítico',
-            'skills.item4': 'Gestión de incidentes críticos',
-            'skills.item5': 'Automatización de tareas repetitivas',
-            'skills.item6': 'Diseño de soluciones escalables',
-            'skills.item7': 'Trabajo en equipo multidisciplinario',
-            'skills.item8': 'Liderazgo técnico',
-            'skills.item9': 'Documentación de procesos',
-            'skills.item10': 'Aprendizaje continuo',
-            'skills.item11': 'Orientación a resultados',
-            'skills.item12': 'Priorización y organización',
-            'skills.item13': 'Adaptación al cambio',
-            'skills.item14': 'Toma de decisiones bajo presión',
             'services.title': 'Servicios',
             'services.infrastructure.title': 'Infraestructura',
             'services.infrastructure.desc': 'Servidores & soluciones cloud',
@@ -51,6 +39,9 @@
             'contact.text': '¿Proyecto, consultoría o colaboración?',
             'contact.emailLink': 'Enviame un correo',
             'contact.whatsappLink': 'Contactame por Whatsapp',
+            'contact.location': 'Buenos Aires, Argentina',
+            'contact.hours': 'Lun a Vie 9:00 - 18:00 hs',
+            'contact.responseTime': 'Respuesta en menos de 24 hs hábiles',
             'contact.note1': 'Consultas sin compromiso.',
             'contact.note2': 'Presupuestos a medida según el alcance del proyecto.',
             'contact.meeting': 'Agendar Reunión'
@@ -60,6 +51,8 @@
             'nav.skills': 'Skills',
             'nav.services': 'Services',
             'nav.contact': 'Contact',
+            'nav.menu.open': 'Open menu',
+            'nav.menu.close': 'Close menu',
             'hero.tagline': 'IT Infrastructure Consulting | SR Unix/Linux Engineer',
             'hero.desc.line2': 'Custom solutions for Home, Businesses and SMEs.',
             'hero.desc.line3.prefix': 'Over ',
@@ -67,20 +60,6 @@
             'hero.cta.meeting': 'Schedule meeting',
             'hero.cta.cv': 'Download CV',
             'skills.title': 'Skills',
-            'skills.item1': 'Complex problem-solving',
-            'skills.item2': 'Clear technical communication',
-            'skills.item3': 'Analytical thinking',
-            'skills.item4': 'Critical incident management',
-            'skills.item5': 'Task automation',
-            'skills.item6': 'Scalable solution design',
-            'skills.item7': 'Cross-functional teamwork',
-            'skills.item8': 'Technical leadership',
-            'skills.item9': 'Process documentation',
-            'skills.item10': 'Continuous learning',
-            'skills.item11': 'Results-driven mindset',
-            'skills.item12': 'Prioritization and organization',
-            'skills.item13': 'Adaptability to change',
-            'skills.item14': 'Decision-making under pressure',
             'services.title': 'Services',
             'services.infrastructure.title': 'Infrastructure',
             'services.infrastructure.desc': 'Servers & cloud solutions',
@@ -104,6 +83,9 @@
             'contact.text': 'Project, consulting or collaboration?',
             'contact.emailLink': 'Send me an email',
             'contact.whatsappLink': 'Contact me on WhatsApp',
+            'contact.location': 'Buenos Aires, Argentina',
+            'contact.hours': 'Mon to Fri 9:00 AM - 6:00 PM',
+            'contact.responseTime': 'Response in less than 24 business hours',
             'contact.note1': 'No-obligation consultations.',
             'contact.note2': 'Tailored quotes based on the scope of the project.',
             'contact.meeting': 'Schedule Meeting'
@@ -158,6 +140,9 @@
         var btn = document.getElementById('lang-switch');
         if (btn) btn.textContent = l === 'es' ? 'ENG' : 'SPA';
 
+        updateLanguageBlocks();
+        updateNavToggleAriaLabel();
+
         var startDate = new Date(2000, 11, 12);
         var today = new Date();
         var years = today.getFullYear() - startDate.getFullYear();
@@ -177,11 +162,26 @@
     var toggle = document.querySelector('.nav-toggle');
     var links = document.querySelectorAll('.nav-links a');
 
+    function updateLanguageBlocks() {
+        document.querySelectorAll('[data-lang-block]').forEach(function (el) {
+            var blockLang = el.getAttribute('data-lang-block');
+            el.classList.toggle('hidden', blockLang !== lang);
+        });
+    }
+
+    function updateNavToggleAriaLabel() {
+        if (!toggle || !nav) return;
+        var t = translations[lang] || translations.es;
+        var isOpen = nav.classList.contains('open');
+        var labelKey = isOpen ? 'nav.menu.close' : 'nav.menu.open';
+        toggle.setAttribute('aria-label', t[labelKey] || (isOpen ? 'Cerrar menú' : 'Abrir menú'));
+    }
+
     if (toggle && nav) {
         toggle.addEventListener('click', function () {
             nav.classList.toggle('open');
             toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-            toggle.setAttribute('aria-label', nav.classList.contains('open') ? 'Cerrar menú' : 'Abrir menú');
+            updateNavToggleAriaLabel();
         });
     }
 
