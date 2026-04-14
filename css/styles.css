@@ -13,6 +13,8 @@
     --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
     --transition: 0.2s ease;
+    --section-pad-top: 2.5rem;
+    --section-pad-bottom: 2rem;
 }
 
 *,
@@ -148,12 +150,12 @@ a:hover {
 
 .hero {
     position: relative;
-    min-height: 70vh;
+    min-height: auto;
     scroll-margin-top: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6rem 0 4rem;
+    padding: 6rem 0 var(--section-pad-top);
     overflow: hidden;
 }
 
@@ -214,6 +216,7 @@ a:hover {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 .btn {
@@ -263,11 +266,17 @@ a:hover {
 }
 
 .section {
-    padding: 3rem;
+    padding: var(--section-pad-top) 3rem var(--section-pad-bottom);
     scroll-margin-top: 4rem;
 }
 
+.hero + .section,
+.section + .section {
+    border-top: 1px solid var(--border);
+}
+
 /* Títulos Servicios y Contacto: misma posición (izq) y tamaño */
+.skills .section-title,
 .services .section-title,
 .contact .section-title {
     font-size: 1.5rem;
@@ -277,15 +286,29 @@ a:hover {
     text-align: left;
 }
 
+.skills {
+    background: var(--bg-elevated);
+}
+
+.skills-list {
+    list-style: disc;
+    margin: 0;
+    padding-left: 1.25rem;
+    display: block;
+}
+
+.skills-list li {
+    margin: 0.45rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
 .services {
     background: var(--bg-elevated);
-    padding-top: 3rem;
-    padding-bottom: 2rem;
 }
 
 .contact {
     background: var(--bg-elevated);
-    padding-top: 1rem;
 }
 
 .cards {
