@@ -4,7 +4,7 @@
     var translations = {
         es: {
             'nav.about': 'Sobre mí',
-            'nav.skills': 'Aptitudes',
+            'nav.skills': 'Habilidades',
             'nav.services': 'Servicios',
             'nav.contact': 'Contacto',
             'nav.menu.open': 'Abrir menú',
@@ -15,7 +15,8 @@
             'hero.desc.line3.suffix': ' años de experiencia en la industria IT.',
             'hero.cta.meeting': 'Agendar reunión',
             'hero.cta.cv': 'Descargar CV',
-            'skills.title': 'Aptitudes',
+            'skills.title': 'Habilidades Técnicas',
+            'education.title': 'Formación y Certificaciones',
             'services.title': 'Servicios',
             'services.infrastructure.title': 'Infraestructura',
             'services.infrastructure.desc': 'Servidores & soluciones cloud',
@@ -59,7 +60,8 @@
             'hero.desc.line3.suffix': ' years of experience in the IT industry.',
             'hero.cta.meeting': 'Schedule meeting',
             'hero.cta.cv': 'Download CV',
-            'skills.title': 'Skills',
+            'skills.title': 'Technical Skills',
+            'education.title': 'Education & Certifications',
             'services.title': 'Services',
             'services.infrastructure.title': 'Infrastructure',
             'services.infrastructure.desc': 'Servers & cloud solutions',
