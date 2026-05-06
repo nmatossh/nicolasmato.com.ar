@@ -25,7 +25,7 @@
             <a href="#" class="logo">nmato<span class="logo-cursor">_</span></a>
             <ul class="nav-links" id="main-menu">
                 <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
-                <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Formación</a></li>
                 <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
                 <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
                 <li><button type="button" id="lang-switch" class="lang-btn" aria-label="Switch language">ENG</button>
@@ -42,73 +42,92 @@
         <section id="sobre-mi" class="hero">
             <div class="hero-bg" aria-hidden="true"></div>
             <div class="container hero-inner">
-                <div class="hero-avatar">
-                    <img src="img/nmato.jpg" alt="Nicolas Mato" width="180" height="180">
-                </div>
-                <h1 class="hero-title">Nicolás Mato</h1>
-                <p class="hero-tagline" data-i18n="hero.tagline">Consultoría de Infraestructura IT | Ingeniero SR
-                    Unix/Linux</p>
-                <p class="hero-desc"><span data-i18n="hero.desc.line2"></span><br><span
-                        data-i18n="hero.desc.line3.prefix"></span><span id="years-exp"></span><span
-                        data-i18n="hero.desc.line3.suffix"></span></p>
-                <div class="hero-cta">
-                    <a href="https://calendly.com/nmato/new-meeting" class="btn btn-primary" target="_blank"
-                        rel="noopener" data-i18n="hero.cta.meeting">Agendar reunión</a>
-                    <a href="nmato_cv.pdf" class="btn btn-secondary" download data-i18n="hero.cta.cv">Descargar CV</a>
+                <div class="hero-flex">
+                    <div class="hero-avatar">
+                        <img src="img/nmato.jpg" alt="Nicolas Mato" width="180" height="180">
+                    </div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">Nicolás Mato</h1>
+                        <p class="hero-tagline" data-i18n="hero.tagline">Consultoría de Infraestructura IT | Ingeniero
+                            SR
+                            Unix/Linux</p>
+                        <p class="hero-desc"><span data-i18n="hero.desc.line2"></span><br><span
+                                data-i18n="hero.desc.line3.prefix"></span><span id="years-exp"></span><span
+                                data-i18n="hero.desc.line3.suffix"></span></p>
+                        <div class="hero-cta">
+                            <a href="https://calendly.com/nmato/new-meeting" class="btn btn-primary" target="_blank"
+                                rel="noopener" data-i18n="hero.cta.meeting">Agendar reunión</a>
+                            <a href="nmato_cv.pdf" class="btn btn-secondary" download data-i18n="hero.cta.cv">Descargar
+                                CV</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="section skills">
             <div class="container">
-                <div class="skills-grid">
-                    <div class="skills-column">
-                        <h2 class="section-title" data-i18n="skills.title">Habilidades Técnicas</h2>
-                        <ul class="skills-list" data-lang-block="es">
-                            <li>GNU/Linux & Microsoft SysAdmin.</li>
-                            <li>Ethical Hacking Expert.</li>
-                            <li>Monitoreo de Infraestructura.</li>
-                            <li>Gestión de incidentes críticos.</li>
-                            <li>Implementación y Automatización con AI.</li>
-                            <li>Automatización Bash Scripting.</li>
-                            <li>Administración de Entornos Virtuales.</li>
-                            <li>Diseño Frontend y Backend.</li>
-                            <li>Desarrollo de Sistemas ERP.</li>
-                            <li>Documentación de Procesos.</li>
-                        </ul>
-                        <ul class="skills-list hidden" data-lang-block="en">
-                            <li>GNU/Linux & Microsoft SysAdmin.</li>
-                            <li>Ethical Hacking Expert.</li>
-                            <li>Infrastructure Monitoring.</li>
-                            <li>Critical Incident Management.</li>
-                            <li>AI Implementation and Automation.</li>
-                            <li>Bash Scripting Automation.</li>
-                            <li>Virtual Environment Administration.</li>
-                            <li>Frontend and Backend Design.</li>
-                            <li>ERP Systems Development.</li>
-                            <li>Process Documentation.</li>
-                        </ul>
+                <h2 class="section-title" data-i18n="nav.skills">Formación</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-laptop-code"></i> <span data-i18n="skills.title">Perfil
+                                    Técnico</span></h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="skills-list" data-lang-block="es">
+                                <li>GNU/Linux & Microsoft SysAdmin.</li>
+                                <li>Ethical Hacking Expert.</li>
+                                <li>Monitoreo de Infraestructura.</li>
+                                <li>Gestión de incidentes críticos.</li>
+                                <li>Implementación y Automatización con AI.</li>
+                                <li>Automatización Bash Scripting.</li>
+                                <li>Administración de Entornos Virtuales.</li>
+                                <li>Diseño Frontend y Backend.</li>
+                                <li>Desarrollo de Sistemas ERP.</li>
+                                <li>Documentación de Procesos.</li>
+                            </ul>
+                            <ul class="skills-list hidden" data-lang-block="en">
+                                <li>GNU/Linux & Microsoft SysAdmin.</li>
+                                <li>Ethical Hacking Expert.</li>
+                                <li>Infrastructure Monitoring.</li>
+                                <li>Critical Incident Management.</li>
+                                <li>AI Implementation and Automation.</li>
+                                <li>Bash Scripting Automation.</li>
+                                <li>Virtual Environment Administration.</li>
+                                <li>Frontend and Backend Design.</li>
+                                <li>ERP Systems Development.</li>
+                                <li>Process Documentation.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="skills-column">
-                        <h2 class="section-title" data-i18n="education.title">Formación y Certificaciones</h2>
-                        <ul class="skills-list" data-lang-block="es">
-                            <li>Inglés [Nivel B1].</li>
-                            <li>Desarrollador Web Backend.</li>
-                            <li>Linux System Administrator.</li>
-                            <li>Ethical Hacking Expert.</li>
-                            <li>Red Hat Certified System Administration [RHCSA].</li>
-                            <li>Red Hat Certified Engineer [RHCE] D0180/D0280: Openshift Admin I & II.</li>
-                            <li>Red Hat Certified Specialist in Managing Ansible Automation Platform [En curso].</li>
-                        </ul>
-                        <ul class="skills-list hidden" data-lang-block="en">
-                            <li>English [B1 Level].</li>
-                            <li>Backend Web Developer.</li>
-                            <li>Linux System Administrator.</li>
-                            <li>Ethical Hacking Expert.</li>
-                            <li>Red Hat Certified System Administration [RHCSA].</li>
-                            <li>Red Hat Certified Engineer [RHCE] D0180/D0280: Openshift Admin I & II.</li>
-                            <li>Red Hat Certified Specialist in Managing Ansible Automation Platform [In progress].</li>
-                        </ul>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="card-icon fa-solid fa-graduation-cap"></i> <span
+                                    data-i18n="education.title">Formación y Certificaciones</span></h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="skills-list" data-lang-block="es">
+                                <li>Inglés [Nivel B1].</li>
+                                <li>Desarrollador Web Backend.</li>
+                                <li>Linux System Administrator.</li>
+                                <li>Ethical Hacking Expert.</li>
+                                <li>Red Hat Certified System Administration [RHCSA].</li>
+                                <li>Red Hat Certified Engineer [RHCE] D0180/D0280: Openshift Admin I & II.</li>
+                                <li>Red Hat Certified Specialist in Managing Ansible Automation Platform [En curso].
+                                </li>
+                            </ul>
+                            <ul class="skills-list hidden" data-lang-block="en">
+                                <li>English [B1 Level].</li>
+                                <li>Backend Web Developer.</li>
+                                <li>Linux System Administrator.</li>
+                                <li>Ethical Hacking Expert.</li>
+                                <li>Red Hat Certified System Administration [RHCSA].</li>
+                                <li>Red Hat Certified Engineer [RHCE] D0180/D0280: Openshift Admin I & II.</li>
+                                <li>Red Hat Certified Specialist in Managing Ansible Automation Platform [In progress].
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,7 +142,7 @@
                             <h3><i class="card-icon fa-solid fa-server"></i> <span
                                     data-i18n="services.infrastructure.title">Infraestructura</span></h3>
                         </div>
-                        <p class="card-desc" data-i18n="services.infrastructure.desc">Servidores & soluciones cloud</p>
+
                         <div class="card-body">
                             <p data-i18n="services.infrastructure.detail">Diseño y despliegue de entornos de alta
                                 disponibilidad (físicos, virtuales y cloud). Especialista en conectividad segura (VPN),
@@ -135,9 +154,9 @@
                             <h3><i class="card-icon fa-solid fa-shield-halved"></i> <span
                                     data-i18n="services.security.title">Ciberseguridad</span></h3>
                         </div>
-                        <p class="card-desc" data-i18n="services.security.desc">Auditoría & Recuperación</p>
+
                         <div class="card-body">
-                            <p data-i18n="services.security.detail">Auditorías de vulnerabilidades bajo estándares de
+                            <p data-i18n="services.security.detail">Auditoría de vulnerabilidades bajo estándares de
                                 cumplimiento. Implementación de políticas robustas de Backup y Disaster Recovery para
                                 garantizar la continuidad del negocio.</p>
                         </div>
@@ -147,7 +166,7 @@
                             <h3><i class="card-icon fa-solid fa-code"></i> <span
                                     data-i18n="services.development.title">Desarrollo</span></h3>
                         </div>
-                        <p class="card-desc" data-i18n="services.development.desc">Automatización y DevOps</p>
+
                         <div class="card-body">
                             <p data-i18n="services.development.detail">Optimización de procesos mediante scripts
                                 avanzados (Python/Bash) e integración de pipelines CI/CD. Desarrollo de microservicios,
@@ -159,7 +178,7 @@
                             <h3><i class="card-icon fa-solid fa-screwdriver-wrench"></i> <span
                                     data-i18n="services.hardware.title">Hardware & Software</span></h3>
                         </div>
-                        <p class="card-desc" data-i18n="services.hardware.desc">Gestión de equipamiento</p>
+
                         <div class="card-body">
                             <p data-i18n="services.hardware.detail">Diagnóstico avanzado, reparación y optimización de
                                 estaciones de trabajo y servidores. Gestión de actualizaciones de software,
@@ -172,7 +191,7 @@
                             <h3><i class="card-icon fa-solid fa-desktop"></i> <span
                                     data-i18n="services.os.title">Sistemas Operativos</span></h3>
                         </div>
-                        <p class="card-desc" data-i18n="services.os.desc">Gestión de plataformas</p>
+
                         <div class="card-body">
                             <p data-i18n="services.os.detail">Despliegue, hardening y administración de entornos Windows
                                 y Linux. Gestión de usuarios, servicios y seguridad nativa para garantizar la
@@ -184,7 +203,7 @@
                             <h3><i class="card-icon fa-solid fa-link"></i> <span
                                     data-i18n="services.documentation.title">Documentación</span></h3>
                         </div>
-                        <p class="card-desc" data-i18n="services.documentation.desc">Gestión de procedimientos</p>
+
                         <div class="card-body">
                             <p data-i18n="services.documentation.detail">Estructuración de bases de conocimiento, guías
                                 operativas e instructivos técnicos alineados a normas ISO 9001 e ISO 27001. Recursos
@@ -198,7 +217,6 @@
         <section id="contacto" class="section contact">
             <div class="container">
                 <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
-                <p class="contact-text" data-i18n="contact.text">¿Proyecto, consultoría o colaboración?</p>
                 <div class="contact-info">
                     <p class="contact-item"><i class="fa-solid fa-envelope"></i> <a id="contact-email"
                             class="contact-email-link" href="#" rel="nofollow" data-i18n="contact.emailLink">Enviame un
@@ -212,8 +230,7 @@
                             9:00 - 18:00 hs</span></p>
                     <p class="contact-item"><i class="fa-solid fa-comments"></i> <span
                             data-i18n="contact.responseTime">Respuesta en menos de 24 hs hábiles</span></p>
-                    <p class="contact-note"><span data-i18n="contact.note1">Consultas sin compromiso.</span><span
-                            data-i18n="contact.note2">Presupuestos a medida según el alcance del proyecto.</span></p>
+
                 </div>
                 <div class="contact-actions">
                     <a href="https://calendly.com/nmato/new-meeting" class="btn btn-primary" target="_blank"

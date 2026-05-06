@@ -4,7 +4,7 @@
     var translations = {
         es: {
             'nav.about': 'Sobre mí',
-            'nav.skills': 'Habilidades',
+            'nav.skills': 'Formación',
             'nav.services': 'Servicios',
             'nav.contact': 'Contacto',
             'nav.menu.open': 'Abrir menú',
@@ -15,41 +15,32 @@
             'hero.desc.line3.suffix': ' años de experiencia en la industria IT.',
             'hero.cta.meeting': 'Agendar reunión',
             'hero.cta.cv': 'Descargar CV',
-            'skills.title': 'Habilidades Técnicas',
+            'skills.title': 'Perfil Técnico',
             'education.title': 'Formación y Certificaciones',
             'services.title': 'Servicios',
             'services.infrastructure.title': 'Infraestructura',
-            'services.infrastructure.desc': 'Servidores & soluciones cloud',
-            'services.infrastructure.detail': 'Diseño y despliegue de entornos de alta disponibilidad (físicos, virtuales y cloud). Especialista en conectividad segura (VPN), migraciones críticas a Servicios Cloud y optimización de arquitecturas híbridas.',
+            'services.infrastructure.detail': 'Servidores & Cloud.<br>Diseño y despliegue de entornos de alta disponibilidad (físicos, virtuales y cloud).<br>Especialista en conectividad segura (VPN), migraciones críticas a Servicios Cloud y optimización de arquitecturas híbridas.',
             'services.security.title': 'Ciberseguridad',
-            'services.security.desc': 'Auditoría & Recuperación',
-            'services.security.detail': 'Auditorías de vulnerabilidades bajo estándares de cumplimiento. Implementación de políticas robustas de Backup y Disaster Recovery para garantizar la continuidad del negocio.',
+            'services.security.detail': 'Auditoría & Recuperación.<br>Auditorías de vulnerabilidades bajo estándares de cumplimiento.<br>Implementación de políticas robustas de Backup y Disaster Recovery para garantizar la continuidad del negocio.',
             'services.development.title': 'Desarrollo',
-            'services.development.desc': 'Automatización y DevOps',
-            'services.development.detail': 'Optimización de procesos mediante scripts avanzados (Python/Bash) e integración de pipelines CI/CD. Desarrollo de microservicios, APIs y dashboards personalizados para la gestión de infraestructura.',
+            'services.development.detail': 'Automatización y DevOps.<br>Optimización de procesos mediante scripts avanzados (Python/Bash) e integración de pipelines CI/CD.<br>Desarrollo de microservicios, APIs y dashboards personalizados para la gestión de infraestructura.',
             'services.documentation.title': 'Documentación',
-            'services.documentation.desc': 'Gestión de procedimientos',
-            'services.documentation.detail': 'Estructuración de bases de conocimiento, guías operativas e instructivos técnicos alineados a normas ISO 9001 e ISO 27001. Recursos centralizados para maximizar la eficiencia operativa.',
-            'services.hardware.title': 'Hardware & Software',
-            'services.hardware.desc': 'Gestión de equipamiento',
-            'services.hardware.detail': 'Diagnóstico avanzado, reparación y optimización de PC, estaciones de trabajo y servidores. Gestión de actualizaciones de software, mantenimiento preventivo y upgrades de rendimiento para extender la vida útil de los equipos.',
-            'services.os.title': 'Sistemas Operativos',
-            'services.os.desc': 'Gestión de plataformas',
-            'services.os.detail': 'Despliegue, hardening y administración de entornos Windows y Linux. Gestión de usuarios, servicios y seguridad nativa para garantizar la estabilidad de sistemas críticos.',
+            'services.documentation.detail': 'Gestión de procedimientos.<br>Estructuración de bases de conocimiento, guías operativas e instructivos técnicos alineados a normas ISO 9001 e ISO 27001.<br>Recursos centralizados para maximizar la eficiencia operativa.',
+            'services.hardware.title': 'Hardware',
+            'services.hardware.detail': 'Gestión de equipamiento.<br>Diagnóstico avanzado, reparación y optimización de PC, estaciones de trabajo y servidores.<br>Gestión de actualizaciones de software, mantenimiento preventivo y upgrades de rendimiento para extender la vida útil de los equipos.',
+            'services.os.title': 'Sistemas',
+            'services.os.detail': 'Gestión de plataformas.<br>Despliegue, hardening y administración de entornos Windows y Linux.<br>Gestión de usuarios, servicios y seguridad nativa para garantizar la estabilidad de sistemas críticos.',
             'contact.title': 'Contacto',
-            'contact.text': '¿Proyecto, consultoría o colaboración?',
             'contact.emailLink': 'Enviame un correo',
             'contact.whatsappLink': 'Contactame por Whatsapp',
             'contact.location': 'Buenos Aires, Argentina',
             'contact.hours': 'Lun a Vie 9:00 - 18:00 hs',
             'contact.responseTime': 'Respuesta en menos de 24 hs hábiles',
-            'contact.note1': 'Consultas sin compromiso.',
-            'contact.note2': 'Presupuestos a medida según el alcance del proyecto.',
             'contact.meeting': 'Agendar Reunión'
         },
         en: {
             'nav.about': 'About me',
-            'nav.skills': 'Skills',
+            'nav.skills': 'Background',
             'nav.services': 'Services',
             'nav.contact': 'Contact',
             'nav.menu.open': 'Open menu',
@@ -60,36 +51,27 @@
             'hero.desc.line3.suffix': ' years of experience in the IT industry.',
             'hero.cta.meeting': 'Schedule meeting',
             'hero.cta.cv': 'Download CV',
-            'skills.title': 'Technical Skills',
+            'skills.title': 'Technical Profile',
             'education.title': 'Education & Certifications',
             'services.title': 'Services',
             'services.infrastructure.title': 'Infrastructure',
-            'services.infrastructure.desc': 'Servers & cloud solutions',
-            'services.infrastructure.detail': 'Design and deployment of high-availability environments (physical, virtual, and cloud). Specialist in secure connectivity (VPN), critical migrations to Cloud Services, and hybrid architecture optimization.',
+            'services.infrastructure.detail': 'Servers & Cloud.<br>Design and deployment of high-availability environments (physical, virtual, and cloud).<br>Specialist in secure connectivity (VPN), critical migrations to Cloud Services, and hybrid architecture optimization.',
             'services.security.title': 'Cybersecurity',
-            'services.security.desc': 'Audit & Recovery',
-            'services.security.detail': 'Vulnerability auditing under compliance standards. Implementation of robust Backup and Disaster Recovery policies to ensure business continuity.',
+            'services.security.detail': 'Audit & Recovery.<br>Vulnerability auditing under compliance standards.<br>Implementation of robust Backup and Disaster Recovery policies to ensure business continuity.',
             'services.development.title': 'Development',
-            'services.development.desc': 'Automation & DevOps',
-            'services.development.detail': 'Process optimization through advanced scripting (Python/Bash) and CI/CD pipeline integration. Development of microservices, APIs, and custom dashboards for infrastructure management.',
+            'services.development.detail': 'Automation & DevOps.<br>Process optimization through advanced scripting (Python/Bash) and CI/CD pipeline integration.<br>Development of microservices, APIs, and custom dashboards for infrastructure management.',
             'services.documentation.title': 'Documentation',
-            'services.documentation.desc': 'Procedure management',
-            'services.documentation.detail': 'Structuring of knowledge bases, operating guides, and technical instructions aligned with ISO 9001 and ISO 27001 standards. Centralized resources to maximize operational efficiency.',
-            'services.hardware.title': 'Hardware & Software',
-            'services.hardware.desc': 'Equipment management',
-            'services.hardware.detail': 'Advanced diagnosis, repair, and optimization of PC, workstations and servers. Software update management, preventive maintenance, and performance upgrades to extend asset lifespan.',
-            'services.os.title': 'Operating Systems',
-            'services.os.desc': 'Platform management',
-            'services.os.detail': 'Deployment, hardening, and administration of Windows and Linux environments. User management, services, and native security to ensure critical system stability.',
+            'services.documentation.detail': 'Procedure management.<br>Structuring of knowledge bases, operating guides, and technical instructions aligned with ISO 9001 and ISO 27001 standards.<br>Centralized resources to maximize operational efficiency.',
+            'services.hardware.title': 'Hardware',
+            'services.hardware.detail': 'Equipment management.<br>Advanced diagnosis, repair, and optimization of PC, workstations and servers.<br>Software update management, preventive maintenance, and performance upgrades to extend asset lifespan.',
+            'services.os.title': 'Systems',
+            'services.os.detail': 'Platform management.<br>Deployment, hardening, and administration of Windows and Linux environments.<br>User management, services, and native security to ensure critical system stability.',
             'contact.title': 'Contact',
-            'contact.text': 'Project, consulting or collaboration?',
             'contact.emailLink': 'Send me an email',
             'contact.whatsappLink': 'Contact me on WhatsApp',
             'contact.location': 'Buenos Aires, Argentina',
             'contact.hours': 'Mon to Fri 9:00 AM - 6:00 PM',
             'contact.responseTime': 'Response in less than 24 business hours',
-            'contact.note1': 'No-obligation consultations.',
-            'contact.note2': 'Tailored quotes based on the scope of the project.',
             'contact.meeting': 'Schedule Meeting'
         }
     };
@@ -110,11 +92,7 @@
 
     var lang = storageGet('lang', 'es');
 
-    /**
-     * Email no va en el HTML estático: crawlers tontos no lo ven en el snapshot inicial.
-     * Sustituí CONTACT_EMAIL_B64 por el resultado de btoa('usuario@dominio.com') en consola.
-     * No es protección contra bots avanzados; para eso: formulario + Turnstile y backend o servicio tipo Formspree.
-     */
+
     var CONTACT_EMAIL_B64 = 'aGV4YWNvcmUuc29wb3J0ZUBnbWFpbC5jb20=';
 
     function initContactEmail() {
@@ -136,7 +114,7 @@
         var t = translations[l];
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
             var key = el.getAttribute('data-i18n');
-            if (t[key]) el.textContent = t[key];
+            if (t[key]) el.innerHTML = t[key];
         });
 
         var btn = document.getElementById('lang-switch');
