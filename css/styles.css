@@ -15,6 +15,24 @@
     --transition: 0.2s ease;
     --section-pad-top: 2.5rem;
     --section-pad-bottom: 2rem;
+    --html-bg: #0a0a0a;
+    --header-bg: rgba(13, 17, 23, 0.85);
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] {
+    --bg: #e8ebed;
+    --bg-elevated: #f0f3f5;
+    --bg-card: #dce1e4;
+    --border: #b9c2c9;
+    --text: #1b1f23;
+    --text-muted: #4a5560;
+    --accent: #1b7535;
+    --accent-hover: #145a27;
+    --accent-dim: rgba(27, 117, 53, 0.12);
+    --html-bg: #cfd4d8;
+    --header-bg: rgba(232, 235, 237, 0.85);
+    --shadow: rgba(0, 0, 0, 0.06);
 }
 
 *,
@@ -25,7 +43,8 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: #0a0a0a;
+    background-color: var(--html-bg);
+    transition: background-color 0.3s ease;
 }
 
 body {
@@ -42,6 +61,7 @@ body {
     border-left: 1px solid var(--border);
     border-right: 1px solid var(--border);
     padding-bottom: 3.5rem;
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
 a {
@@ -61,6 +81,21 @@ a:hover {
     padding: 0 1.5rem;
 }
 
+.header,
+.footer {
+    --bg: #0d1117;
+    --bg-elevated: #161b22;
+    --bg-card: #21262d;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --accent: #3fb950;
+    --accent-hover: #56d364;
+    --accent-dim: rgba(63, 185, 80, 0.1);
+    --header-bg: rgba(13, 17, 23, 0.85);
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -69,11 +104,12 @@ a:hover {
     max-width: 1000px;
     margin: 0 auto;
     z-index: 100;
-    background: rgba(13, 17, 23, 0.85);
+    background: var(--header-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     border-left: 1px solid var(--border);
     border-right: 1px solid var(--border);
+    transition: background var(--transition), border-color var(--transition);
 }
 
 .nav {
@@ -132,21 +168,54 @@ a:hover {
     color: var(--text);
 }
 
-.lang-btn {
+.nav-btn-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-btn,
+.theme-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: 1px solid var(--border);
     color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: 0.8rem;
-    padding: 0.35rem 0.6rem;
+    height: 1.85rem;
     border-radius: var(--radius);
     cursor: pointer;
-    transition: color var(--transition), border-color var(--transition);
+    transition: color var(--transition), border-color var(--transition), transform var(--transition);
+    box-sizing: border-box;
 }
 
-.lang-btn:hover {
+.lang-btn {
+    padding: 0 0.65rem;
+}
+
+.theme-btn {
+    width: 1.85rem;
+    padding: 0;
+}
+
+.lang-btn:hover,
+.theme-btn:hover {
     color: var(--accent);
     border-color: var(--accent);
+}
+
+.theme-btn:hover {
+    transform: scale(1.08);
+}
+
+.theme-btn i {
+    transition: transform var(--transition);
+}
+
+.theme-btn:hover i {
+    transform: rotate(15deg);
 }
 
 .nav-toggle {
@@ -207,7 +276,8 @@ a:hover {
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid var(--border);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px var(--shadow);
+    transition: border-color var(--transition);
 }
 
 .hero-avatar img {
@@ -536,7 +606,7 @@ a:hover {
     max-width: 1000px;
     margin: 0 auto;
     z-index: 100;
-    background: rgba(13, 17, 23, 0.85);
+    background: var(--header-bg);
     backdrop-filter: blur(12px);
     min-height: 3.5rem;
     border-top: 1px solid var(--border);
@@ -544,6 +614,7 @@ a:hover {
     border-right: 1px solid var(--border);
     display: flex;
     align-items: center;
+    transition: background var(--transition), border-color var(--transition);
 }
 
 .footer-inner {
@@ -615,7 +686,7 @@ a:hover {
         padding: 1rem;
         background: var(--bg-elevated);
         border-bottom: 1px solid var(--border);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 8px 24px var(--shadow);
     }
 
     .nav.open .nav-links li {
@@ -650,4 +721,14 @@ a:hover {
     .btn {
         width: 100%;
     }
+
+    .theme-btn,
+    .lang-btn {
+        height: 2.75rem;
+        min-width: 2.75rem;
+    }
+}
+
+[data-theme="light"] .card-icon--github {
+    color: #24292f;
 }

@@ -28,7 +28,9 @@
                 <li><a href="#skills" data-i18n="nav.skills">Formación</a></li>
                 <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
                 <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
-                <li><button type="button" id="lang-switch" class="lang-btn" aria-label="Switch language">ENG</button>
+                <li class="nav-btn-group">
+                    <button type="button" id="theme-switch" class="theme-btn" aria-label="Cambiar tema"><i class="fa-solid fa-sun"></i></button>
+                    <button type="button" id="lang-switch" class="lang-btn" aria-label="Cambiar idioma a inglés">ENG</button>
                 </li>
             </ul>
             <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"
@@ -56,8 +58,8 @@
                                 data-i18n="hero.desc.line3.suffix"></span></p>
                         <div class="hero-cta">
                             <a href="https://calendly.com/nmato/new-meeting" class="btn btn-primary" target="_blank"
-                                rel="noopener" data-i18n="hero.cta.meeting">Agendar reunión</a>
-                            <a href="nmato_cv.pdf" class="btn btn-secondary" download data-i18n="hero.cta.cv">Descargar
+                                rel="noopener noreferrer" data-i18n="hero.cta.meeting">Agendar reunión</a>
+                            <a id="cv-download" href="cv_spa.pdf" class="btn btn-secondary" download data-i18n="hero.cta.cv">Descargar
                                 CV</a>
                         </div>
                     </div>
@@ -71,7 +73,7 @@
                 <div class="cards">
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-laptop-code"></i> <span data-i18n="skills.title">Perfil
+                            <h3><i class="card-icon fa-solid fa-laptop-code" aria-hidden="true"></i> <span data-i18n="skills.title">Perfil
                                     Técnico</span></h3>
                         </div>
                         <div class="card-body">
@@ -103,7 +105,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-graduation-cap"></i> <span
+                            <h3><i class="card-icon fa-solid fa-graduation-cap" aria-hidden="true"></i> <span
                                     data-i18n="education.title">Formación y Certificaciones</span></h3>
                         </div>
                         <div class="card-body">
@@ -139,7 +141,7 @@
                 <div class="cards">
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-server"></i> <span
+                            <h3><i class="card-icon fa-solid fa-server" aria-hidden="true"></i> <span
                                     data-i18n="services.infrastructure.title">Infraestructura</span></h3>
                         </div>
 
@@ -151,7 +153,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-shield-halved"></i> <span
+                            <h3><i class="card-icon fa-solid fa-shield-halved" aria-hidden="true"></i> <span
                                     data-i18n="services.security.title">Ciberseguridad</span></h3>
                         </div>
 
@@ -163,7 +165,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-code"></i> <span
+                            <h3><i class="card-icon fa-solid fa-code" aria-hidden="true"></i> <span
                                     data-i18n="services.development.title">Desarrollo</span></h3>
                         </div>
 
@@ -175,8 +177,8 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-screwdriver-wrench"></i> <span
-                                    data-i18n="services.hardware.title">Hardware & Software</span></h3>
+                            <h3><i class="card-icon fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> <span
+                                    data-i18n="services.hardware.title">Hardware &amp; Software</span></h3>
                         </div>
 
                         <div class="card-body">
@@ -188,7 +190,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-desktop"></i> <span
+                            <h3><i class="card-icon fa-solid fa-desktop" aria-hidden="true"></i> <span
                                     data-i18n="services.os.title">Sistemas Operativos</span></h3>
                         </div>
 
@@ -200,7 +202,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h3><i class="card-icon fa-solid fa-link"></i> <span
+                            <h3><i class="card-icon fa-solid fa-link" aria-hidden="true"></i> <span
                                     data-i18n="services.documentation.title">Documentación</span></h3>
                         </div>
 
@@ -218,25 +220,25 @@
             <div class="container">
                 <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
                 <div class="contact-info">
-                    <p class="contact-item"><i class="fa-solid fa-envelope"></i> <a id="contact-email"
+                    <p class="contact-item"><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a id="contact-email"
                             class="contact-email-link" href="#" rel="nofollow" data-i18n="contact.emailLink">Enviame un
                             correo</a></p>
                     <p class="contact-item"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <a
                             href="https://api.whatsapp.com/send?phone=5491123923138" target="_blank"
                             rel="noopener noreferrer" data-i18n="contact.whatsappLink">Contactame por Whatsapp</a></p>
-                    <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span
+                    <p class="contact-item"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span
                             data-i18n="contact.location">Buenos Aires, Argentina</span></p>
-                    <p class="contact-item"><i class="fa-solid fa-clock"></i> <span data-i18n="contact.hours">Lun a Vie
+                    <p class="contact-item"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span data-i18n="contact.hours">Lun a Vie
                             9:00 - 18:00 hs</span></p>
-                    <p class="contact-item"><i class="fa-solid fa-comments"></i> <span
+                    <p class="contact-item"><i class="fa-solid fa-comments" aria-hidden="true"></i> <span
                             data-i18n="contact.responseTime">Respuesta en menos de 24 hs hábiles</span></p>
 
                 </div>
                 <div class="contact-actions">
                     <a href="https://calendly.com/nmato/new-meeting" class="btn btn-primary" target="_blank"
-                        rel="noopener" data-i18n="contact.meeting">Agendar Reunión</a>
+                        rel="noopener noreferrer" data-i18n="contact.meeting">Agendar Reunión</a>
                     <a href="https://hexacore.com.ar" class="btn btn-outline" target="_blank"
-                        rel="noopener">Hexacore</a>
+                        rel="noopener noreferrer">Hexacore</a>
                 </div>
             </div>
         </section>
@@ -246,16 +248,16 @@
     <footer class="footer">
         <div class="container footer-inner">
             <p class="footer-text">© 2026 Nicolás Mato | Design by <a href="https://hexacore.com.ar" target="_blank"
-                    rel="noopener">Hexacore</a></p>
+                    rel="noopener noreferrer">Hexacore</a></p>
             <div class="footer-social">
-                <a href="https://linkedin.com/in/nmato" target="_blank" rel="noopener" aria-label="LinkedIn"><i
-                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://linkedin.com/in/nmato" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
                 <a href="https://api.whatsapp.com/send?phone=5491123923138" target="_blank" rel="noopener noreferrer"
-                    aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://calendly.com/nmato/new-meeting" target="_blank" rel="noopener" aria-label="Calendly"><i
-                        class="fa-solid fa-calendar-days"></i></a>
-                <a href="https://github.com/nmatossh" target="_blank" rel="noopener" aria-label="GitHub"><i
-                        class="fa-brands fa-github"></i></a>
+                    aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://calendly.com/nmato/new-meeting" target="_blank" rel="noopener noreferrer" aria-label="Calendly"><i
+                        class="fa-solid fa-calendar-days" aria-hidden="true"></i></a>
+                <a href="https://github.com/nmatossh" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                        class="fa-brands fa-github" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>

@@ -90,6 +90,35 @@
         } catch (e) {}
     }
 
+    var theme = storageGet('theme', 'dark');
+    if (!localStorage.getItem('theme')) {
+        try {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                theme = 'light';
+            }
+        } catch (e) {}
+    }
+
+    function applyTheme(t) {
+        theme = t;
+        storageSet('theme', t);
+        document.documentElement.setAttribute('data-theme', t);
+        var themeBtn = document.getElementById('theme-switch');
+        if (themeBtn) {
+            var icon = themeBtn.querySelector('i');
+            if (icon) {
+                if (t === 'light') {
+                    icon.className = 'fa-solid fa-moon';
+                } else {
+                    icon.className = 'fa-solid fa-sun';
+                }
+            }
+            themeBtn.setAttribute('aria-label', t === 'light' ? 'Cambiar a tema oscuro' : 'Cambiar a tema claro');
+        }
+    }
+
+    applyTheme(theme);
+
     var lang = storageGet('lang', 'es');
 
 
@@ -109,26 +138,43 @@
         lang = l;
         storageSet('lang', l);
         document.documentElement.lang = l;
-        document.title = l === 'es' ? 'Nicolas Mato - IT Infrastructure Consulting | SR Unix/Linux Engineer' : 'Nicolas Mato - IT Infrastructure Consulting | SR Unix/Linux Engineer';
+        document.title = l === 'es'
+            ? 'Nicolás Mato - Consultoría de Infraestructura IT | Ingeniero SR Unix/Linux'
+            : 'Nicolas Mato - IT Infrastructure Consulting | SR Unix/Linux Engineer';
 
         var t = translations[l];
+        var htmlKeys = {
+            'services.infrastructure.detail': true,
+            'services.security.detail': true,
+            'services.development.detail': true,
+            'services.documentation.detail': true,
+            'services.hardware.detail': true,
+            'services.os.detail': true
+        };
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
             var key = el.getAttribute('data-i18n');
-            if (t[key]) el.innerHTML = t[key];
+            if (t[key]) {
+                if (htmlKeys[key]) {
+                    el.innerHTML = t[key];
+                } else {
+                    el.textContent = t[key];
+                }
+            }
         });
 
+        var cvBtn = document.getElementById('cv-download');
+        if (cvBtn) {
+            cvBtn.setAttribute('href', l === 'es' ? 'cv_spa.pdf' : 'cv_eng.pdf');
+        }
+
         var btn = document.getElementById('lang-switch');
-        if (btn) btn.textContent = l === 'es' ? 'ENG' : 'SPA';
+        if (btn) {
+            btn.textContent = l === 'es' ? 'ENG' : 'SPA';
+            btn.setAttribute('aria-label', l === 'es' ? 'Cambiar idioma a inglés' : 'Switch language to Spanish');
+        }
 
         updateLanguageBlocks();
         updateNavToggleAriaLabel();
-
-        var startDate = new Date(2000, 11, 12);
-        var today = new Date();
-        var years = today.getFullYear() - startDate.getFullYear();
-        if (today.getMonth() < startDate.getMonth() || (today.getMonth() === startDate.getMonth() && today.getDate() < startDate.getDate())) years--;
-        var yearsSpan = document.getElementById('years-exp');
-        if (yearsSpan) yearsSpan.textContent = years;
     }
 
     var langBtn = document.getElementById('lang-switch');
@@ -137,6 +183,20 @@
             applyLanguage(lang === 'es' ? 'en' : 'es');
         });
     }
+
+    var themeBtn = document.getElementById('theme-switch');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function () {
+            applyTheme(theme === 'dark' ? 'light' : 'dark');
+        });
+    }
+
+    var startDate = new Date(2000, 11, 12);
+    var today = new Date();
+    var years = today.getFullYear() - startDate.getFullYear();
+    if (today.getMonth() < startDate.getMonth() || (today.getMonth() === startDate.getMonth() && today.getDate() < startDate.getDate())) years--;
+    var yearsSpan = document.getElementById('years-exp');
+    if (yearsSpan) yearsSpan.textContent = years;
 
     var nav = document.querySelector('.nav');
     var toggle = document.querySelector('.nav-toggle');

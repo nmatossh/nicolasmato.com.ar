@@ -34,14 +34,4 @@ Este proyecto presenta una landing page moderna, minimalista y profesional que d
 └── README.md           # Documentación del proyecto
 ```
 
-## 🔧 Instalación y Despliegue
-
-Al ser un sitio estático, no requiere dependencias de servidor. Para visualizarlo localmente:
-
-1. Clona el repositorio: `git clone https://github.com/nmatossh/nicolasmato.com.ar.git`
-2. Abre `index.html` en tu navegador preferido.
-
-Para el despliegue, es compatible con **GitHub Pages**, **Vercel**, **Netlify** o cualquier servidor web estándar.
-
----
 Diseñado por [Hexacore](https://hexacore.com.ar).
