@@ -15,9 +15,14 @@
     --transition: 0.2s ease;
     --section-pad-top: 2.5rem;
     --section-pad-bottom: 2rem;
-    --html-bg: #0a0a0a;
+    --html-bg: #111418;
     --header-bg: rgba(13, 17, 23, 0.85);
     --shadow: rgba(0, 0, 0, 0.3);
+    --section-bg: var(--bg);
+    --avatar-border: #30363d;
+    --btn-secondary-bg: #dce1e4;
+    --btn-secondary-hover-bg: #f0f3f5;
+    --btn-secondary-text: #1b1f23;
 }
 
 [data-theme="light"] {
@@ -30,9 +35,14 @@
     --accent: #1b7535;
     --accent-hover: #145a27;
     --accent-dim: rgba(27, 117, 53, 0.12);
-    --html-bg: #cfd4d8;
+    --html-bg: #111418;
     --header-bg: rgba(232, 235, 237, 0.85);
     --shadow: rgba(0, 0, 0, 0.06);
+    --section-bg: #dde2e6;
+    --avatar-border: #4a5568;
+    --btn-secondary-bg: #21262d;
+    --btn-secondary-hover-bg: #161b22;
+    --btn-secondary-text: #e6edf3;
 }
 
 *,
@@ -104,7 +114,7 @@ a:hover {
     max-width: 1000px;
     margin: 0 auto;
     z-index: 100;
-    background: var(--header-bg);
+    background: #0d1117;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     border-left: 1px solid var(--border);
@@ -251,8 +261,8 @@ a:hover {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at center, var(--accent-dim) 0%, transparent 70%),
-        var(--bg);
+        radial-gradient(circle at center, var(--accent-dim) 0%, transparent 90%),
+        var(--section-bg);
     pointer-events: none;
 }
 
@@ -275,8 +285,8 @@ a:hover {
     margin: 0;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--border);
-    box-shadow: 0 8px 32px var(--shadow);
+    border: 3px solid var(--avatar-border);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
     transition: border-color var(--transition);
 }
 
@@ -347,29 +357,48 @@ a:hover {
 
 .btn-secondary {
     background: var(--bg-card);
-    color: var(--text);
+    background: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
     border-color: var(--border);
 }
 
 .btn-secondary:hover {
-    background: var(--bg-elevated);
+    background: var(--btn-secondary-hover-bg);
     border-color: var(--accent);
     color: var(--accent);
 }
 
 .btn-outline {
-    background: transparent;
-    color: var(--accent);
-    border-color: var(--accent);
+    background: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
+    border-color: var(--border);
 }
 
 .btn-outline:hover {
-    background: var(--accent-dim);
+    background: var(--btn-secondary-hover-bg);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .section {
+    position: relative;
+    overflow: hidden;
     padding: var(--section-pad-top) 3rem var(--section-pad-bottom);
     scroll-margin-top: 4rem;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, var(--accent-dim) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .hero+.section,
@@ -412,7 +441,7 @@ a:hover {
 }
 
 .services {
-    background: var(--bg);
+    background: var(--section-bg);
 }
 
 .contact {
@@ -557,7 +586,9 @@ a:hover {
 
 .contact-item i {
     margin-right: 0.5rem;
-    width: 1.2em;
+    width: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
     color: var(--accent);
 }
 
@@ -606,7 +637,7 @@ a:hover {
     max-width: 1000px;
     margin: 0 auto;
     z-index: 100;
-    background: var(--header-bg);
+    background: #0d1117;
     backdrop-filter: blur(12px);
     min-height: 3.5rem;
     border-top: 1px solid var(--border);
