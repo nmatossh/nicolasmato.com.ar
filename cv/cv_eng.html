@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #23282f;
+      font-size: 9.1pt;
+      line-height: 1.32;
+      margin: 0;
+    }
+
+    /* Fixed dark background column, repeats on every page (no text) */
+    .sidebar-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 34%;
+      height: 100%;
+      background: #12232e;
+      z-index: -1;
+    }
+
+    /* Sidebar content: only rendered once, on page 1 */
+    .sidebar-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 34%;
+      color: #dfe6ea;
+      padding: 20pt 16pt;
+    }
+
+    .sidebar-content h2 {
+      font-size: 9.5pt;
+      text-transform: uppercase;
+      letter-spacing: 1.2pt;
+      color: #6fb7c9;
+      border-bottom: 0.75pt solid #2c4450;
+      padding-bottom: 4pt;
+      margin: 20pt 0 8pt 0;
+    }
+
+    .name {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 4pt;
+    }
+
+    .role {
+      font-size: 9.5pt;
+      color: #9fc9d6;
+      font-weight: 600;
+      margin-bottom: 2pt;
+    }
+
+    .contact-item {
+      font-size: 8.6pt;
+      color: #c3ccd1;
+      margin-bottom: 3pt;
+      word-break: break-word;
+    }
+
+    .skill-block {
+      margin-bottom: 10pt;
+    }
+
+    .skill-block .cat {
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 8.8pt;
+      margin-bottom: 2pt;
+    }
+
+    .skill-block .items {
+      color: #b8c4ca;
+      font-size: 8.4pt;
+    }
+
+    .sidebar-content ul {
+      margin: 0;
+      padding-left: 12pt;
+    }
+
+    .sidebar-content li {
+      margin-bottom: 3pt;
+      font-size: 8.6pt;
+      color: #c3ccd1;
+    }
+
+    .lang-row {
+      font-size: 8.6pt;
+      color: #c3ccd1;
+      margin-bottom: 3pt;
+    }
+
+    .lang-row .level {
+      color: #6fb7c9;
+      font-weight: 600;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 34%;
+      padding: 20pt 22pt;
+    }
+
+    .main h2 {
+      font-size: 11.5pt;
+      color: #12232e;
+      letter-spacing: 0.4pt;
+      margin: 0 0 6pt 0;
+      padding-bottom: 3pt;
+      border-bottom: 2pt solid #12232e;
+    }
+
+    .main .section {
+      margin-bottom: 10pt;
+    }
+
+    .profile-text {
+      text-align: justify;
+      margin: 0;
+    }
+
+    .area {
+      margin-bottom: 6pt;
+    }
+
+    .area-title {
+      font-weight: 700;
+      color: #12232e;
+      font-size: 9.6pt;
+      margin-bottom: 2pt;
+      position: relative;
+      padding-left: 10pt;
+    }
+
+    .area-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 3pt;
+      width: 5pt;
+      height: 5pt;
+      background: #6fb7c9;
+    }
+
+    .main ul {
+      margin: 0;
+      padding-left: 14pt;
+    }
+
+    .main li {
+      margin-bottom: 2pt;
+    }
+
+    .main li strong {
+      color: #12232e;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar-bg"></div>
+  <div class="sidebar-content">
+    <div class="name">Nicolás<br>Mato</div>
+    <div class="role">Consultor en Infraestructura</div>
+    <div class="role" style="color:#7ea6b3; font-weight:400;">SR Unix Linux Administrator</div>
+
+    <h2>Contacto</h2>
+    <div class="contact-item">www.nicolasmato.com.ar</div>
+    <div class="contact-item">inbox@nicolasmato.com.ar</div>
+
+    <h2>Idiomas</h2>
+    <div class="lang-row">Español: <span class="level">Nativo</span></div>
+    <div class="lang-row">Inglés: <span class="level">B1 Fluido</span></div>
+
+    <h2>Formación y Certificaciones</h2>
+    <ul>
+      <li>Linux System Administrator</li>
+      <li>Red Hat Certified Engineer [RHCE]</li>
+      <li>Red Hat Certified System Administration [RHCSA]</li>
+      <li>OpenShift Admin I &amp; II</li>
+      <li>Ethical Hacking Expert</li>
+      <li>Backend Web Developer</li>
+    </ul>
+
+    <h2>Stack Técnico</h2>
+    <div class="skill-block">
+      <div class="cat">Virtualización / Cloud</div>
+      <div class="items">Cisco UCS, VMware ESXi, Proxmox, VirtualBox, AWS, OpenShift, VPN</div>
+    </div>
+    <div class="skill-block">
+      <div class="cat">Automatización</div>
+      <div class="items">Ansible, Puppet, Control-M, Rundeck</div>
+    </div>
+    <div class="skill-block">
+      <div class="cat">DevOps</div>
+      <div class="items">Jenkins, GitLab, Git, Docker, Podman, Kubernetes</div>
+    </div>
+    <div class="skill-block">
+      <div class="cat">Seguridad y Gestión de Credenciales</div>
+      <div class="items">CyberArk, TPAM, Nessus, CrowdStrike, BHOM, TeamPass, Vaultwarden</div>
+    </div>
+    <div class="skill-block">
+      <div class="cat">Observabilidad</div>
+      <div class="items">AppDynamics, Zabbix, Grafana, Nagios, Check_MK</div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="section">
+      <h2>Perfil Profesional</h2>
+      <p class="profile-text">Consultor en Infraestructura con más de 25 años de trayectoria en la administración de
+        sistemas críticos en entornos productivos de alta escala. Experto en ecosistemas Red Hat, virtualización
+        avanzada y automatización de infraestructura. Especialista en la definición de configuraciones base, remediación
+        de vulnerabilidades y liderazgo técnico de equipos orientado a la eficiencia operativa y estándares de la
+        industria.</p>
+    </div>
+
+    <div class="section">
+      <h2>Áreas de Especialización</h2>
+
+      <div class="area">
+        <div class="area-title">1. Infraestructura: Servidores y Soluciones Cloud</div>
+        <ul>
+          <li><strong>Arquitectura de Sistemas:</strong> Diseño y despliegue de entornos de alta disponibilidad sobre
+            hardware crítico (Cisco UCS) y plataformas de virtualización (VMware ESXi, Proxmox, VirtualBox).</li>
+          <li><strong>Gestión y Orquestación:</strong> Administración del ciclo de vida de sistemas con Red Hat
+            Satellite, Red Hat Fuse y 3scale API Management.</li>
+          <li><strong>Ecosistemas Cloud y Redes:</strong> Implementación de soluciones en AWS, despliegue de OpenShift y
+            configuración de conectividad segura (VPN).</li>
+        </ul>
+      </div>
+
+      <div class="area">
+        <div class="area-title">2. Ciberseguridad: Auditoría y Recuperación</div>
+        <ul>
+          <li><strong>Seguridad y Acceso:</strong> Gestión de identidades y accesos privilegiados (CyberArk, TPAM).</li>
+          <li><strong>Vulnerabilidades:</strong> Análisis, corrección y aplicación de parches mediante Nessus,
+            CrowdStrike y BHOM bajo estándares de cumplimiento.</li>
+          <li><strong>Protección de Endpoints:</strong> Implementación de soluciones de seguridad perimetral, antivirus
+            y firewalls.</li>
+        </ul>
+      </div>
+
+      <div class="area">
+        <div class="area-title">3. Desarrollo: Automatización y DevOps</div>
+        <ul>
+          <li><strong>Infraestructura como Código e Intervenciones:</strong> Automatización mediante Ansible, Puppet,
+            Control-M, Rundeck.</li>
+          <li><strong>CI/CD y Contenedores:</strong> Integración de flujos de trabajo con Jenkins, GitLab y Git. Gestión
+            de entornos con Docker, Podman y Kubernetes.</li>
+          <li><strong>Observabilidad:</strong> Monitoreo y análisis de rendimiento con AppDynamics, Zabbix, Grafana,
+            Nagios, Check_MK.</li>
+        </ul>
+      </div>
+
+      <div class="area">
+        <div class="area-title">4. Documentación: Gestión de Procedimientos</div>
+        <ul>
+          <li><strong>Estandarización:</strong> Estructuración de bases de conocimiento e instructivos técnicos
+            alineados a normas ISO 9001 e ISO 27001.</li>
+          <li><strong>Gestión de Credenciales:</strong> Implementación y administración de bóvedas de contraseñas para
+            el resguardo seguro y compartido de accesos (TeamPass, Vaultwarden).</li>
+          <li><strong>Gestión de Servicios:</strong> Desarrollo de manuales operativos y flujos de escalamiento técnico.
+          </li>
+        </ul>
+      </div>
+
+      <div class="area">
+        <div class="area-title">5. Hardware y Software: Gestión de Equipamiento</div>
+        <ul>
+          <li><strong>Soporte de Planta:</strong> Diagnóstico y reparación avanzada de estaciones de trabajo, servidores
+            y periféricos industriales.</li>
+          <li><strong>Ciclo de Vida:</strong> Gestión de actualizaciones de software, mantenimiento preventivo y
+            optimización de rendimiento para extender la vida útil de los activos.</li>
+        </ul>
+      </div>
+
+      <div class="area">
+        <div class="area-title">6. Sistemas Operativos: Gestión de Plataformas</div>
+        <ul>
+          <li><strong>Ecosistema Linux:</strong> Despliegue, hardening y administración integral de distribuciones Unix
+            &amp; Linux.</li>
+          <li><strong>Entornos Windows:</strong> Administración de servidores y estaciones de trabajo, incluyendo el
+            soporte de sistemas heredados críticos para la continuidad operativa.</li>
+          <li><strong>Interoperabilidad:</strong> Configuración de servicios multiplataforma y entornos híbridos,
+            asegurando la estabilidad y seguridad nativa del sistema.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
