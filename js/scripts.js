@@ -138,9 +138,17 @@
         lang = l;
         storageSet('lang', l);
         document.documentElement.lang = l;
-        document.title = l === 'es'
-            ? 'Nicolás Mato - Consultoría de Infraestructura IT | Ingeniero SR Unix/Linux'
-            : 'Nicolas Mato - IT Infrastructure Consulting | SR Unix/Linux Engineer';
+
+        var titleText = l === 'es'
+            ? 'Nicolás Mato | Consultoría de Infraestructura IT y Ciberseguridad'
+            : 'Nicolas Mato | IT Infrastructure Consulting & Cybersecurity';
+
+        document.title = titleText;
+
+        var favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) {
+            favicon.setAttribute('title', titleText);
+        }
 
         var t = translations[l];
         var htmlKeys = {
