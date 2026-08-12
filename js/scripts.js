@@ -40,7 +40,7 @@
         },
         en: {
             'nav.about': 'About me',
-            'nav.skills': 'Background',
+            'nav.skills': 'Skills',
             'nav.services': 'Services',
             'nav.contact': 'Contact',
             'nav.menu.open': 'Open menu',
@@ -52,7 +52,7 @@
             'hero.cta.meeting': 'Schedule meeting',
             'hero.cta.cv': 'Download CV',
             'skills.title': 'Technical Profile',
-            'education.title': 'Education & Certifications',
+            'education.title': 'Skills',
             'services.title': 'Services',
             'services.infrastructure.title': 'Infrastructure',
             'services.infrastructure.detail': 'Servers & Cloud.<br>Design and deployment of high-availability environments (physical, virtual, and cloud).<br>Specialist in secure connectivity (VPN), critical migrations to Cloud Services, and hybrid architecture optimization.',
