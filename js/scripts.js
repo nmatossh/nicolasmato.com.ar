@@ -172,7 +172,7 @@
 
         var cvBtn = document.getElementById('cv-download');
         if (cvBtn) {
-            cvBtn.setAttribute('href', l === 'es' ? 'cv_spa.pdf' : 'cv_eng.pdf');
+            cvBtn.setAttribute('href', l === 'es' ? 'cv/cv_spa.pdf' : 'cv/cv_eng.pdf');
         }
 
         var btn = document.getElementById('lang-switch');
