@@ -10,7 +10,7 @@
             'nav.menu.open': 'Abrir menú',
             'nav.menu.close': 'Cerrar menú',
             'hero.tagline': 'Consultoría de Infraestructura IT | Sysadmin SR Linux',
-            'hero.desc.line2': 'Soluciones a medida para el hogar, Empresas y PyMEs.',
+            'hero.desc.line2': 'Soluciones a medida para el Hogar, Empresas y PyMEs.',
             'hero.desc.line3.prefix': 'Más de ',
             'hero.desc.line3.suffix': ' años de experiencia en el rubro IT.',
             'hero.cta.meeting': 'Agendar reunión',
