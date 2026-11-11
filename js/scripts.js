@@ -122,7 +122,7 @@
     var lang = storageGet('lang', 'es');
 
 
-    var CONTACT_EMAIL_B64 = 'aGV4YWNvcmUuc29wb3J0ZUBnbWFpbC5jb20=';
+    var CONTACT_EMAIL_B64 = 'aW5ib3hAbmljb2xhc21hdG8uY29tLmFy';
 
     function initContactEmail() {
         var a = document.getElementById('contact-email');
