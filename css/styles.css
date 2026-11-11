@@ -298,7 +298,8 @@ a:hover {
 }
 
 .hero-content {
-    flex: 0 1 auto;
+    flex: 0 1 465px;
+    min-width: 0;
 }
 
 .hero-title {
