@@ -474,6 +474,10 @@ a:hover {
     transform: translateY(-2px);
 }
 
+.services .card:hover {
+    transform: none;
+}
+
 .card-header {
     margin: 0;
 }
